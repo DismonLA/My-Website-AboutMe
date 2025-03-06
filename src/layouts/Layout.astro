@@ -1,0 +1,37 @@
+---
+import Header from "../layout/Header.astro"
+import Footer from "../layout/Footer.astro"
+import EyesBackground from "../components/eyesBackground.astro" 
+  // Путь уточните по вашей структуре
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+    <!-- Скрипт для движения зрачков -->
+    <script src="/scripts/fon_script.js" defer></script>
+  </head>
+  <body>
+    <Header />
+    <EyesBackground />
+    <slot />
+    <Footer /> 
+  </body>
+  <style>
+
+    html, body {
+      margin: 0;
+      padding-top: 50px;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #0d0b14;
+      min-height: 100vh;
+      position: relative;
+    }
+  </style>
+</html>

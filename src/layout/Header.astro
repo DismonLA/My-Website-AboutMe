@@ -1,0 +1,145 @@
+---
+// import location from "../../assets/img/icons/location.svg";
+// import phone from "../../assets/img/icons/phone.svg";
+// import instagram from "../../assets/img/icons/instagram.svg";
+// import telegram from "../../assets/img/icons/telegram.svg";
+// import whatsapp from "../../assets/img/icons/whatsapp.svg";
+// import mail from "../../assets/img/icons/mail.svg";
+// import { Image } from "astro:assets";
+
+const currentPath = Astro.url.pathname;
+---
+
+
+<nav class="header">
+    <div class="menue_img1">
+        <a href="http://localhost:4321">
+        <img src="/homeIcon.svg" alt="" class="img1">
+        </a>
+    </div>
+    
+    <!-- <div class="ramafoto_foto">
+        <img src="/foto1.svg" alt="" class="foto"> -->
+    <div class=" inicial">?</div> 
+    <div class="logo_AbMe">
+        <img src="/logo_ABME.svg" alt="" class="log_img">
+    </div>
+</nav>
+<style>
+.header {
+        display: flex; /* Делаем header flex-контейнером для управления выравниванием содержимого */
+        align-items: center; /* Центрируем содержимое (иконку) по вертикали */
+		position: fixed; /* stnavlivaet na odmom mewste pri prokrutke sajta */
+        justify-content: space-between; /*  Раздвигаем элементы (иконку влево, фото вправо) */
+        height: 60px; /* Высота header */
+        /* padding: 0 20px; /* Внутренние отступы справа и слева */
+		top: 0; /* otstup ot verha */
+		background: #242424; /* fon */
+		width: 100%; /* shirina otnositelno sranici */
+        z-index: 10; /* Устанавливаем слой, чтобы header был поверх контента */
+		/*color: #fff;  cvet txt vnutri  */
+        padding: 0px 10px; /* Внутренние отступы */
+        padding-right: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для стилистики */
+		/* @media (max-width: 768px) {
+    height: 70px;
+} */
+	}
+
+    .menue_img1 {
+        height: 40px; /* Задает высоту элемента — 40 пикселей */
+        width: 40px; /* Задает ширину элемента — 40 пикселей */
+        position: relative;
+        border-radius: 100%; /* Делает элемент круглым, устанавливая радиус границ в 100% */
+        
+        display: flex; /* Устанавливает flex-контейнер, чтобы управлять выравниванием содержимого */
+        align-items: center; /* Центрирует содержимое по вертикали внутри элемента */
+        justify-content: center; /* Центрирует содержимое по горизонтали внутри элемента */
+        margin: 10; /* Убирает внешние отступы вокруг элемента */
+        transition: background-color 0.3s ease-in-out; /* Плавное изменение фона */
+    }
+    /* При наведении фон становится видимым */
+    .menue_img1:hover {
+        background-color: #D9D9D9; /* Светло-серый фон при наведении */
+    }
+    .img1 {
+        height: 30px;
+        width: 30px;
+    }
+       
+    .ramafoto_foto {
+        height: 60px; /* Высота рамки */
+        width: 100px; /* Ширина рамки */
+        display: flex; /* Делаем рамку flex-контейнером */
+        align-items: center; /* Центрируем изображение по вертикали */
+        justify-content: center; /* Выравниваем изображение по правой стороне */
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+    }
+    .foto {
+        border-radius: 100%; /* Делает элемент круглым, устанавливая радиус границ в 100% */
+        width: 60px;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+        object-fit: cover; /* Заполняем рамку, сохраняя пропорции изображения */
+    }
+    .watsap_fot{
+        height: 30px; /* Задает высоту элемента — 40 пикселей */
+        width: 30px; /* Задает ширину элемента — 40 пикселей */
+        position: fixed;
+        right: 130px;
+        border-radius: 100%; /* Делает элемент круглым, устанавливая радиус границ в 100% */
+        background-color: #068608; /* Задает светло-серый цвет фона для элемента */
+        display: flex; /* Устанавливает flex-контейнер, чтобы управлять выравниванием содержимого */
+        align-items: center; /* Центрирует содержимое по вертикали внутри элемента */
+        justify-content: center; /* Центрирует содержимое по горизонтали внутри элемента */
+    }
+    .wa_img{
+        height: 20px;
+        width: 20px;
+    }
+    .inicial {
+        position: fixed; /* Фиксируем элемент */
+        right: 10px; /* Отступ от правого края */
+        height: 40px; /* Задает высоту элемента — 40 пикселей */
+        width: 40px; /* Задает ширину элемента — 40 пикселей */
+        border-radius: 100%; /* Делает элемент круглым, устанавливая радиус границ в 100% */
+        background-color: #6d216e; /* Задает светло-серый цвет фона для элемента */
+        display: flex; /* Устанавливает flex-контейнер, чтобы управлять выравниванием содержимого */
+        align-items: center; /* Центрирует содержимое по вертикали внутри элемента */
+        justify-content: center; /* Центрирует содержимое по горизонтали внутри элемента */
+        color: #ffffff; /* Цвет текста */
+        font-size: 16px; /* Размер текста */
+        font-weight: bold; /* Жирный шрифт */
+        font-family: Arial, sans-serif; /* Шрифт текста */
+        text-transform: uppercase; /* Преобразует текст в верхний регистр */
+    }
+    .telegr_fot{
+        height: 30px; /* Задает высоту элемента — 40 пикселей */
+        width: 30px; /* Задает ширину элемента — 40 пикселей */
+        position: fixed;
+        right: 75px;
+        border-radius: 100%; /* Делает элемент круглым, устанавливая радиус границ в 100% */
+        background-color: #2ea5dd; /* Задает светло-серый цвет фона для элемента */
+        display: flex; /* Устанавливает flex-контейнер, чтобы управлять выравниванием содержимого */
+        align-items: center; /* Центрирует содержимое по вертикали внутри элемента */
+        justify-content: center; /* Центрирует содержимое по горизонтали внутри элемента */
+       /* margin-right: 20px; /* Отступ справа от кнопки */
+    }
+    .tg_img{
+        height: 20px;
+        width: 20px;
+    }
+    .logo_AbMe {
+        position: fixed; /* Фиксируем элемент */
+        left: 60px; /* Отступ от левого края */
+        
+}
+    .logo_img{
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
