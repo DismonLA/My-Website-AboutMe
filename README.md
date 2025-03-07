@@ -4,7 +4,6 @@ This is my portfolio website, where I showcase my skills, experience, and projec
 
 Frontend: Astro, HTML, CSS, JavaScript.
 Design: SVG graphics, animations.
-Version Control: Git, GitHub.
 
 Future Plans:
 Implementing a backend for user registration and authentication.
