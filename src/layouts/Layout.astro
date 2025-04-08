@@ -2,7 +2,6 @@
 import Header from "../layout/Header.astro"
 import Footer from "../layout/Footer.astro"
 import EyesBackground from "../components/eyesBackground.astro" 
-  // Путь уточните по вашей структуре
 ---
 
 <html lang="ru">
@@ -18,13 +17,22 @@ import EyesBackground from "../components/eyesBackground.astro"
     <Header />
     <EyesBackground />
     <slot />
+    <div class="codetheworld-io">
+      <a href="https://www.linkedin.com/in/dmitrijs-%C4%BCa%C5%A1enko-ab38b8250/" target="_blank" style="--color: #0076b5de"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/dismon_o_prior" target="_blank" style="--color: #e4405ed5"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/37122110281" target="_blank" style="--color: #25d365dc"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://t.me/desoleiter" target="_blank" style="--color: #0088ccbf"><i class="fa-brands fa-telegram"></i></a>
+      <a href="https://github.com/DismonLA" target="_blank" style="--color: #b8b8b8c0"><i class="fa-brands fa-github"></i></a> 
+    </div>
     <Footer /> 
   </body>
   <style>
+	  /* Подключаем FontAwesome */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
     html, body {
       margin: 0;
-      padding-top: 50px;
+      padding-top: 60px;
       overflow-x: hidden;
     }
 
@@ -33,5 +41,40 @@ import EyesBackground from "../components/eyesBackground.astro"
       min-height: 100vh;
       position: relative;
     }
+ 
+    /* Социальные иконки */
+    .codetheworld-io {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 150px;
+    }
+
+    .codetheworld-io a {
+      margin: 0 10px;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.5s;
+      color: var(--color);
+      font-size: 2.5em;
+      position: relative;
+      overflow: hidden;
+      -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    }
+
+    /* Эффект свечения при наведении */
+    .codetheworld-io a:hover {
+      background: var(--color);
+      color: #050801;
+      box-shadow: 0 0 5px var(--color), 
+            0 0 25px var(--color), 
+            0 0 50px var(--color), 
+            0 0 200px var(--color);
+    }
+
   </style>
 </html>
